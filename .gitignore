@@ -72,3 +72,23 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# others
+.hg/
+binaries/
+deriveddatacache/
+.vs/
+build/
+intermediate/
+PACKPLUGIN/
+COMPPLUGIN/
+saved/
+*.orig
+*.sln
+*.xlsx
+
+Content/Megascans/
+
+Content/VRE/Character/
+Content/VRE/Grippables/Weapons/
+Content/VRE/Grippables/PhysicsProps/
