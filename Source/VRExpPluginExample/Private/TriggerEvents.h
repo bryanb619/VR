@@ -3,7 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+// REF to actor
 #include "GameFramework/Actor.h"
+#include "Components/StaticMeshComponent.h"
 #include "TriggerEvents.generated.h"
 
 UCLASS()
@@ -11,14 +13,25 @@ class ATriggerEvents : public AActor
 {
 	GENERATED_BODY()
 	
+	// Start 
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+	//virtual void Tick(float DeltaTime) override;
+
 public:	
 	// Sets default values for this actor's properties
 	ATriggerEvents();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	UFUNCTION()
+		void Event(class AActor* OverlappedActor, const class AActor* OtherActor) const;
 
+	UPROPERTY(EditAnywhere)
+		// trigger Actor
+		AActor* ActorToTrigger;
+
+
+	/*
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -31,5 +44,5 @@ public:
 	// Declare overlap end function
 	UFUNCTION()
 	void OnOverlapEnd(class AActor* OverlappedActor, class AActor* OtherActor);
-
+*/
 };

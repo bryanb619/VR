@@ -3,6 +3,27 @@
 
 #include "TriggerEvents.h"
 
+ATriggerEvents::ATriggerEvents()
+{
+	OnActorBeginOverlap.AddDynamic(this, &ATriggerEvents::Event);
+}
+
+void ATriggerEvents::BeginPlay()
+{
+	Super::BeginPlay(); 
+}
+
+void ATriggerEvents::Event(class AActor* OverlappedActor, const class AActor* OtherActor) const
+{
+	// check if Actors do not equal nullptr and that 
+	if (OtherActor && (OtherActor != this))
+	{
+		// print to screen using above defined method when actor enters trigger box
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Overlap Begin")));
+	}
+}
+
+/*
 // Sets default values
 ATriggerEvents::ATriggerEvents()
 {
@@ -25,3 +46,4 @@ void ATriggerEvents::Tick(float DeltaTime)
 
 }
 
+*/
