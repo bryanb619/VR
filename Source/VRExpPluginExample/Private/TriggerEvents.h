@@ -17,6 +17,7 @@ class ATriggerEvents : public AActor
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	void Event(AActor* OverlappedActor, const AActor* OtherActor) const;
 	//virtual void Tick(float DeltaTime) override;
 
 public:	
@@ -24,7 +25,7 @@ public:
 	ATriggerEvents();
 
 	UFUNCTION()
-		void Event(class AActor* OverlappedActor, const class AActor* OtherActor) const;
+		void Event(class AActor* OverlappedActor,class AActor* OtherActor);
 
 	UPROPERTY(EditAnywhere)
 		// trigger Actor
