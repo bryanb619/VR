@@ -78,6 +78,10 @@
 				"Android",
 				"HoloLens"
 			]
+		},
+		{
+			"Name": "FMODStudio",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
