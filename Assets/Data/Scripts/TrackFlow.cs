@@ -13,7 +13,7 @@ public class TrackFlow : MonoBehaviour
         //_cart = GameObject.Find("Cart").GetComponent<Cart>(); 
     }
 
-    private void OndTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         _cart = other.GetComponent<Cart>();
 
@@ -28,6 +28,7 @@ public class TrackFlow : MonoBehaviour
     private void PerformTriggerAction()
     {
         Quaternion rotation = transform.rotation;
+        Debug.Log(rotation);
         _cart.RotateAround(rotation);
 
     }

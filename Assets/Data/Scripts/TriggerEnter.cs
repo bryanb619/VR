@@ -16,7 +16,7 @@ public class TriggerEnter : MonoBehaviour
         
     }
 
-    private void OndTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {

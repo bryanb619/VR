@@ -9,7 +9,7 @@ public class TriggerHit : MonoBehaviour
     {
         _boxCollider = GetComponent<BoxCollider>();
     }
-    private void OndTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "ThrowObject")
         {
