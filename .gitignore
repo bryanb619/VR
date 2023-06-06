@@ -87,7 +87,7 @@ saved/
 *.sln
 *.xlsx
 
-Content/Megascans/
+#Content/Megascans/
 
 Content/VRE/Character/
 Content/VRE/Grippables/Weapons/
