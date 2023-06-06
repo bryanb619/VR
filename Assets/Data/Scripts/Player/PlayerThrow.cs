@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerThrow : MonoBehaviour
@@ -24,7 +22,7 @@ public class PlayerThrow : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Space key was pressed");
+            
             PerformThrowAction(); 
         }
     }
