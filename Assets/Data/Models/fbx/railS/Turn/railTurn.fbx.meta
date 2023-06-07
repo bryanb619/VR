@@ -3,7 +3,17 @@ guid: a01186a6154a83249aee496d12329195
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: initialShadingGroup.003
+    second: {fileID: 2100000, guid: aa7c580418099e142b41bb8c581d87fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3SG.003
+    second: {fileID: 2100000, guid: 642afcf8f3b7e284da36472996c1c6b4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
