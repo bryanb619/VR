@@ -14,9 +14,10 @@ public class Cart : MonoBehaviour
     [Header("Destination List")]
     [SerializeField]    private Transform _target;
 
-                        private Vector3 _destination; 
+                        private Vector3 _destination;
 
-    [SerializeField] private EventReference soundMove, soundCreacking;
+    [SerializeField]    private StudioEventEmitter soundWheels, soundCrackling;
+    [SerializeField]    private StudioEventEmitter[] soundsMove;
 
 
     private void Awake()
@@ -26,16 +27,25 @@ public class Cart : MonoBehaviour
         _agent.acceleration     = acceleration;
         _agent.updateRotation   = true;
         
+        
+
     }
 
     private void Start()
     {
         _agent.destination = _target.position;
+
     }
 
     private void Update()
     {
-        
+        if (_agent.velocity.magnitude > 0.1f)
+        {
+            foreach (StudioEventEmitter emitter in soundsMove)
+            {
+                emitter.EventInstance.setPaused(false);
+            }
+        }
     }
 
 
@@ -53,6 +63,9 @@ public class Cart : MonoBehaviour
             _agent.SetDestination(dest.position);
             _agent.destination = dest.position;
         }
+
+        
+
     }
 
     public void RotateAround(Quaternion newRotation)
