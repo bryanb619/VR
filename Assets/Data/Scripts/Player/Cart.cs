@@ -1,35 +1,43 @@
 using UnityEngine;
 using UnityEngine.AI;
+using FMODUnity; 
 
 public class Cart : MonoBehaviour
 {
-    [SerializeField] private float _normalSpeed = 5f;
-    private NavMeshAgent _agent;
+    [Header("Cart Speed")]
+    [Range(0, 10)]
+    [SerializeField]    private float normalSpeed = 4f;
+    [Range(0.1f,100f)]
+    [SerializeField]    private float acceleration = 1f;
+                        private NavMeshAgent _agent;
 
-    [SerializeField] private Transform _target;
+    [Header("Destination List")]
+    [SerializeField]    private Transform _target;
 
-    private Vector3 _destination; 
+                        private Vector3 _destination; 
 
+    [SerializeField] private EventReference soundMove, soundCreacking;
 
 
     private void Awake()
     {
         _agent                  = GetComponent<NavMeshAgent>();  
-        _agent.speed            = _normalSpeed;    
+        _agent.speed            = normalSpeed;    
+        _agent.acceleration     = acceleration;
         _agent.updateRotation   = true;
+        
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-       //_agent.SetDestination(_target.position); 
+        _agent.destination = _target.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
+
 
     public void Destination(Transform dest) 
     {
@@ -37,12 +45,11 @@ public class Cart : MonoBehaviour
         {
             _destination = dest.position;
             _agent.destination = _destination;
+
         }
         else // if false set destination to current position    
         {
-#if UNITY_EDITOR
-            Debug.Log("Destination reached");
-#endif
+
             _agent.SetDestination(dest.position);
             _agent.destination = dest.position;
         }
@@ -50,8 +57,6 @@ public class Cart : MonoBehaviour
 
     public void RotateAround(Quaternion newRotation)
     {
-      
         //transform.rotation = newRotation;
-
     }
 }
