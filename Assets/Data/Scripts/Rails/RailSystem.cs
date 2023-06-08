@@ -26,8 +26,7 @@ public class RailSystem : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.K))
         {
-            _cart.Destination(target[1]);
-
+            ChangeDestination(); 
 
             // DestroyPoints(_target[0]); destruction for safety
         }   
@@ -44,31 +43,41 @@ public class RailSystem : MonoBehaviour
                 case 1:
                     {
                         _cart.Destination(target[1]);
+                        DestroyPoints(target[0]);
                         break;
                     }
                 case 2:
                     {
                         _cart.Destination(target[1]);
+
+                        //DestroyPoints(target[0]);
                         break;
                     }
                 case 3:
                     {
                         _cart.Destination(target[1]);
+
+                        //DestroyPoints(target[0]);
                         break;
                     }
                 case 4:
                     {
                         _cart.Destination(target[1]);
+
+                        //DestroyPoints(target[0]);
                         break;
                     }
             }
         }
-
-        
     }
 
     private void DestroyPoints(Transform destroyTarget)
     {
-        Destroy(destroyTarget.gameObject);  
+        Destroy(destroyTarget.gameObject);
+
+#if UNITY_EDITOR
+
+        Debug.Log("Destroying " + destroyTarget.name);
+#endif
     }
 }
