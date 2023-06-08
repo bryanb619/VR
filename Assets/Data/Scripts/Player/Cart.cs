@@ -39,13 +39,15 @@ public class Cart : MonoBehaviour
 
     private void Update()
     {
-        if (_agent.velocity.magnitude > 0.1f)
+        //if (_agent.velocity.magnitude > 0.1f)
+        if(Input.GetKeyDown(KeyCode.H))
         {
             foreach (StudioEventEmitter emitter in soundsMove)
             {
                 emitter.EventInstance.setPaused(false);
             }
         }
+       
     }
 
 
