@@ -44,7 +44,7 @@ public class Cart : MonoBehaviour
         {
             foreach (StudioEventEmitter emitter in soundsMove)
             {
-                emitter.EventInstance.setPaused(false);
+                emitter.EventInstance.setPaused(true);
             }
         }
        
