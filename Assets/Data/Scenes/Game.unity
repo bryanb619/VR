@@ -356,6 +356,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cart
       objectReference: {fileID: 0}
+    - target: {fileID: 7285333479247466894, guid: 9101257595180ea4998187521b3fb91e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566119192501139434, guid: 9101257595180ea4998187521b3fb91e, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566119193935509258, guid: 9101257595180ea4998187521b3fb91e, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8836404749478457748, guid: 9101257595180ea4998187521b3fb91e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9101257595180ea4998187521b3fb91e, type: 3}
 --- !u!1001 &2968632731810131900
