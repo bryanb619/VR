@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
 using FMODUnity;
-using PathCreation;
-using UnityEngine.Serialization;
 
 public class Cart : MonoBehaviour
 {
@@ -12,8 +10,7 @@ public class Cart : MonoBehaviour
     [Range(0.1f,100f)]
     [SerializeField]    private float acceleration = 1f;
                         private NavMeshAgent _agent;
-
-    [FormerlySerializedAs("_target")]
+                        
     [Header("Destination List")]
     [SerializeField]    private Transform target;
 
@@ -62,8 +59,6 @@ public class Cart : MonoBehaviour
     public void Destination(Transform dest) 
     {
         
-        
-        
         if (Vector3.Distance(_destination, dest.position) > 1.0f) // if true set new position
         {
             _destination = dest.position;
@@ -76,9 +71,6 @@ public class Cart : MonoBehaviour
             _agent.SetDestination(dest.position);
             _agent.destination = dest.position;
         }
-
-        
-
     }
 
     public void RotateAround(Quaternion newRotation)

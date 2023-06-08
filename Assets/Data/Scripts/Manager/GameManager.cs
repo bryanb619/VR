@@ -10,7 +10,7 @@ public enum GameState{
 
 public class GameManager : MonoBehaviour
 {
-
+    [SerializeField] private string startMenu;
     public GameState state;
     public static GameManager Instance;
     public static event Action<GameState> OnGameStateChanged;
@@ -120,6 +120,11 @@ public class GameManager : MonoBehaviour
                 }
 
         }
+    }
+    
+    public void TerminateLevel()
+    {
+        SceneManager.LoadScene(startMenu);
     }
     #endregion
 }
