@@ -41,16 +41,12 @@ public class LightOptimize : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        
         lightcomponent.enabled = false;
         lightScript.enabled = false;
-
-
     }
 
     private void OnBecameVisible()
     {
-       
         lightcomponent.enabled = true;
         lightScript.enabled = true;
 
