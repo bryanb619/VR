@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
-using FMODUnity; 
+using FMODUnity;
 
 public class Cart : MonoBehaviour
 {
@@ -10,14 +10,17 @@ public class Cart : MonoBehaviour
     [Range(0.1f,100f)]
     [SerializeField]    private float acceleration = 1f;
                         private NavMeshAgent _agent;
-
+                        
     [Header("Destination List")]
-    [SerializeField]    private Transform _target;
+    [SerializeField]    private Transform target;
 
                         private Vector3 _destination;
 
     [SerializeField]    private StudioEventEmitter soundWheels, soundCrackling;
     [SerializeField]    private StudioEventEmitter[] soundsMove;
+
+    //public PathCreator pathCreator;
+    //float distanceTravelled;
 
 
     private void Awake()
@@ -26,14 +29,11 @@ public class Cart : MonoBehaviour
         _agent.speed            = normalSpeed;    
         _agent.acceleration     = acceleration;
         _agent.updateRotation   = true;
-        
-        
-
     }
 
     private void Start()
     {
-        _agent.destination = _target.position;
+        //_agent.destination = _target.position;
 
     }
 
@@ -47,12 +47,18 @@ public class Cart : MonoBehaviour
                 emitter.EventInstance.setPaused(true);
             }
         }
+
+        //distanceTravelled += normalSpeed * Time.deltaTime;  
+        //transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
+        //transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled);
        
     }
 
 
+
     public void Destination(Transform dest) 
     {
+        
         if (Vector3.Distance(_destination, dest.position) > 1.0f) // if true set new position
         {
             _destination = dest.position;
@@ -65,9 +71,6 @@ public class Cart : MonoBehaviour
             _agent.SetDestination(dest.position);
             _agent.destination = dest.position;
         }
-
-        
-
     }
 
     public void RotateAround(Quaternion newRotation)
