@@ -37,7 +37,7 @@ public class Button : MonoBehaviour
                 button.gameObject.GetComponent<Rigidbody>().detectCollisions = false;
                 button.gameObject.GetComponent<BoxCollider>().enabled = false;
             }
-        }
+        } 
     }
 
     private void ApplyActions()
