@@ -42,7 +42,12 @@ public class Cart : MonoBehaviour
 
     private void Update()
     {
-        
+
+        if (_agent.remainingDistance <= _agent.stoppingDistance)
+        {
+            StopSound();
+        }
+
         //if (_agent.velocity.magnitude > 0.1f)
         /*
         if(Input.GetKeyDown(KeyCode.H))
@@ -95,5 +100,11 @@ public class Cart : MonoBehaviour
         _agent.velocity = Vector3.zero; 
         _agent.isStopped = true;
         
+    }
+    
+    
+    public void StopSound()
+    {
+        cartSound.Stop();
     }
 }
