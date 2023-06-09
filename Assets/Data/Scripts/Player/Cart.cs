@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
-using FMODUnity;
+//using FMODUnity;
 
 public class Cart : MonoBehaviour
 {
@@ -16,8 +16,8 @@ public class Cart : MonoBehaviour
 
                         private Vector3 _destination;
 
-    [SerializeField]    private StudioEventEmitter soundWheels, soundCrackling;
-    [SerializeField]    private StudioEventEmitter[] soundsMove;
+    //[SerializeField]    private StudioEventEmitter soundWheels, soundCrackling;
+    //[SerializeField]    private StudioEventEmitter[] soundsMove;
 
     //public PathCreator pathCreator;
     //float distanceTravelled;
@@ -40,6 +40,7 @@ public class Cart : MonoBehaviour
     private void Update()
     {
         //if (_agent.velocity.magnitude > 0.1f)
+        /*
         if(Input.GetKeyDown(KeyCode.H))
         {
             foreach (StudioEventEmitter emitter in soundsMove)
@@ -51,7 +52,7 @@ public class Cart : MonoBehaviour
         //distanceTravelled += normalSpeed * Time.deltaTime;  
         //transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
         //transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled);
-       
+       */
     }
     public void Destination(Transform dest) 
     {
