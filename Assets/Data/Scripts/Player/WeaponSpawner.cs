@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class WeaponSpawner : MonoBehaviour
 {
-    [SerializeField]private GameObject objectToSpawn, spawnPoint;
+    [SerializeField] private Transform objectToSpawn;
+    [SerializeField]private Transform spawnPoint;
 
     private void Start()
     {
@@ -14,7 +15,8 @@ public class WeaponSpawner : MonoBehaviour
 
     private void SpawnObject()
     {
-        Instantiate(objectToSpawn, spawnPoint.transform.position, Quaternion.identity);
+        Transform newObject = Instantiate(objectToSpawn, spawnPoint.transform.position, spawnPoint.rotation) as Transform;
+        newObject.parent = this.gameObject.transform;
     }
 
     private void OnTriggerExit(Collider other)
@@ -23,13 +25,13 @@ public class WeaponSpawner : MonoBehaviour
         {
             other.gameObject.tag = "ThrowableObject";
             StartCoroutine(SpawnTimer());
-            SpawnObject();
         }
     }
     
     private IEnumerator SpawnTimer()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
+        SpawnObject();
     }
 
 }
