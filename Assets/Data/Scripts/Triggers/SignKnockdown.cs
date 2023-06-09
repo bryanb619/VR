@@ -46,7 +46,7 @@ public class SignKnockdown : MonoBehaviour
 
     private IEnumerator DeathTimer()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(20f);
         gameManager.EndScene();
     }
 }
