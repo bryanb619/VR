@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class SignKnockdown : MonoBehaviour
 {
-    private int totalSigns;
+    [SerializeField] private int totalSigns;
     private bool signsGotUp;
     [SerializeField] private RailSystem railSystem;
     private GameManager gameManager;
+    [SerializeField]private bool thisLevel1;
     private void Start()
     {
         totalSigns = 0;
@@ -44,9 +45,21 @@ public class SignKnockdown : MonoBehaviour
         }
     }
 
+    private void DeathCheck()
+    {
+        if (totalSigns > 0 && thisLevel1)
+        {
+            gameManager.RestartLevel();
+        }
+        else if (totalSigns > 0 && !thisLevel1)
+        {
+            gameManager.RestartLevel2();
+        }
+    }
+    
     private IEnumerator DeathTimer()
     {
-        yield return new WaitForSeconds(10f);
-        gameManager.EndScene();
+        yield return new WaitForSeconds(20f);
+        DeathCheck();
     }
 }

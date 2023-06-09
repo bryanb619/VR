@@ -30,7 +30,7 @@ public class WeaponSpawner : MonoBehaviour
     
     private IEnumerator SpawnTimer()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         SpawnObject();
     }
 
