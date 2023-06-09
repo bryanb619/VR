@@ -19,7 +19,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 119
   m_IsActive: 1
 --- !u!4 &461509483
 Transform:
@@ -113,7 +113,7 @@ MonoBehaviour:
   profileSync: 1
   useCustomBounds: 0
   bounds:
-    m_Center: {x: 0.057074115, y: 1.9000006, z: 0.17125303}
+    m_Center: {x: 31.90107, y: 5.6500006, z: 4.282708}
     m_Extent: {x: 5.210269, y: 3.7, z: 5.210269}
   profile: {fileID: 0}
   customRange: 3.7
@@ -258,6 +258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1491802349}
   - component: {fileID: 7873882709706268740}
+  - component: {fileID: 3445484517936990751}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
@@ -292,13 +293,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fcce07f3c5e9d241b1e0752d713f9f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound:
-    Guid:
-      Data1: 1779274613
-      Data2: 1158948544
-      Data3: -885768258
-      Data4: 21349883
-    Path: event:/World/Fire
+--- !u!82 &3445484517936990751
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491802348}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8aeda98e69c59364b90fbc8472fadf03, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5479807120953455328
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +405,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 119
   m_IsActive: 1
 --- !u!4 &5479807120953455263
 Transform:
@@ -397,7 +487,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 119
   m_IsActive: 1
 --- !u!4 &5479807121701450373
 Transform:
@@ -426,12 +516,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5479807121701450374}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d18b267d82483c42b9897d03ed40a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightcomponent: {fileID: 5479807121728420763}
+  lightcomponent: {fileID: 461509482}
   player: {fileID: 0}
   lightScript: {fileID: 1616005530460643329}
 --- !u!1 &5479807121728420767
@@ -446,13 +536,12 @@ GameObject:
   - component: {fileID: 5479807121728420763}
   - component: {fileID: 5479807121728420764}
   - component: {fileID: 1616005530460643329}
-  - component: {fileID: 6820308879667110328}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 119
   m_IsActive: 0
 --- !u!4 &5479807121728420766
 Transform:
@@ -567,36 +656,6 @@ MonoBehaviour:
   minIntensity: 1.5
   maxIntensity: 2.5
   smoothing: 40
---- !u!114 &6820308879667110328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5479807121728420767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 321297601
-      Data2: 1298413546
-      Data3: 1535558016
-      Data4: -1394986805
-    Path: event:/World/Gameplay/Fire
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 30
 --- !u!1001 &7902601908349408165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -638,7 +697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2627766320228291847, guid: 4c16d00424e06d44a87574c9e7112c55, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 2627766321408105510, guid: 4c16d00424e06d44a87574c9e7112c55, type: 3}
       propertyPath: m_RootOrder
@@ -810,7 +869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2627766321408105689, guid: 4c16d00424e06d44a87574c9e7112c55, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 119
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c16d00424e06d44a87574c9e7112c55, type: 3}
