@@ -45,12 +45,12 @@ public class Pause : MonoBehaviour
 
     private void HandlePause()
     {
-        
+        _state = GameState.Paused;
     }
 
     private void HandlePlay()
     {
-        
+        _state = GameState.Gameplay;
     }
 
     // Update is called once per frame
@@ -64,8 +64,7 @@ public class Pause : MonoBehaviour
                 {
                     if (pauseMenu.activeSelf)
                     {
-                        pauseMenu.SetActive(false);
-                        _gameManager.UpdateGameState(GameState.Gameplay);
+                        ResumeGame();
 #if UNITY_EDITOR
                         Debug.Log("Game Resumed");           
 #endif
@@ -76,8 +75,7 @@ public class Pause : MonoBehaviour
                 {
                     if (!pauseMenu.activeSelf)
                     {
-                        pauseMenu.SetActive(true);
-                        _gameManager.UpdateGameState(GameState.Paused);
+                        PauseGame();
 #if UNITY_EDITOR
                         Debug.Log("Game Paused");        
 #endif
@@ -86,6 +84,34 @@ public class Pause : MonoBehaviour
                 }
             }
         }
-        
     }
+    
+    
+    private void ResumeGame()
+    {
+        _state = GameState.Gameplay;
+        pauseMenu.SetActive(false);
+        _gameManager.UpdateGameState(GameState.Gameplay);
+    }
+    
+    private void PauseGame()
+    {
+        _state = GameState.Paused;
+        pauseMenu.SetActive(true);
+        _gameManager.UpdateGameState(GameState.Paused);
+    }
+
+    #region Button
+
+    public void Resume()
+    {
+        ResumeGame(); 
+    }
+
+    public void Exit()
+    {
+        _gameManager.StartScene();
+    }
+
+    #endregion
 }

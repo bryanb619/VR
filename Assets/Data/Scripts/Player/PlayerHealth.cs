@@ -21,6 +21,6 @@ public class PlayerHealth : MonoBehaviour
 #if UNITY_EDITOR
         Debug.Log("Player is dead");
 #endif
-        _gameManager.TerminateLevel();
+        _gameManager.RestartLevel();
     }
 }

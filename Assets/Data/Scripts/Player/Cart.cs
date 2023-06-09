@@ -53,9 +53,6 @@ public class Cart : MonoBehaviour
         //transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled);
        
     }
-
-
-
     public void Destination(Transform dest) 
     {
         

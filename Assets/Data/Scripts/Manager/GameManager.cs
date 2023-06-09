@@ -31,14 +31,7 @@ public class GameManager : MonoBehaviour
         UpdateGameState(GameState.Gameplay);
 
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-
+    
     public void UpdateGameState(GameState newGamestate)
     {
         state = newGamestate;
@@ -122,9 +115,20 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public void TerminateLevel()
+    public void StartScene()
     {
-        SceneManager.LoadScene(startMenu);
+        SceneManager.LoadScene("StartMenu");
+    }
+    
+    public void RestartLevel()
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("RestartMenu"); 
+    }
+    
+    public void EndScene()
+    {
+        SceneManager.LoadScene("EndMenu");
     }
     #endregion
 }
