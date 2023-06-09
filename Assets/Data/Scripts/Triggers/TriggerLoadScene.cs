@@ -3,6 +3,7 @@ public class TriggerLoadScene : MonoBehaviour
 { 
    private GameManager _gameManager;
    private int _levelNumber;
+   
    private void Awake()
    {
       _gameManager = FindObjectOfType<GameManager>(); 
@@ -18,7 +19,6 @@ public class TriggerLoadScene : MonoBehaviour
       if (other.CompareTag("Player"))
       {
          _gameManager.NextLevel(_levelNumber);
-         
       }
    }
 }
