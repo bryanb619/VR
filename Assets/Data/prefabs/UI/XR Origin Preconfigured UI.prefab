@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8364232784203825233}
   - component: {fileID: 4810284412487403874}
   - component: {fileID: 4810284412487403879}
+  - component: {fileID: 8325184158768123969}
   m_Layer: 2
   m_Name: XR Origin Preconfigured UI
   m_TagString: Untagged
@@ -274,6 +275,14 @@ MonoBehaviour:
   m_LocomotionProvider: {fileID: 4810284412487403875}
   m_MinHeight: 0
   m_MaxHeight: Infinity
+--- !u!81 &8325184158768123969
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245972047493090261}
+  m_Enabled: 1
 --- !u!1 &1494835347624563337
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +295,6 @@ GameObject:
   - component: {fileID: 1494835347624563343}
   - component: {fileID: 4810284412487403883}
   - component: {fileID: 7056258002296102905}
-  - component: {fileID: 115849643757893102}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -487,20 +495,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!114 &115849643757893102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494835347624563337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
-  ListenerNumber: -1
 --- !u!1 &1494835347704729258
 GameObject:
   m_ObjectHideFlags: 0
