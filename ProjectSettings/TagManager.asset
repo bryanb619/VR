@@ -13,6 +13,7 @@ TagManager:
   - ThrowableObject
   - Death Collider
   - Weapon
+  - Sign
   layers:
   - Default
   - TransparentFX
