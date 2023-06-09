@@ -36,6 +36,7 @@ public class Cart : MonoBehaviour
     private void Start()
     {
         //_agent.destination = _target.position;
+        cartSound.Play();
 
     }
 

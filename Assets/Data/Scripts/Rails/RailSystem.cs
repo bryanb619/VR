@@ -4,7 +4,7 @@ public class RailSystem : MonoBehaviour
 {
     [SerializeField]    private Transform[]         target;
                         private Cart                _cart;
-                        private int                 _i = 0;  
+                        private int                 _i;  
 
     private void Awake()
     {
@@ -20,10 +20,9 @@ public class RailSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        // test 
-#if UNITY_EDITOR
         
+#if UNITY_EDITOR
+        // test 
         if(Input.GetKeyDown(KeyCode.K))
         {
             ChangeDestination();
