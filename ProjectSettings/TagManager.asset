@@ -12,6 +12,7 @@ TagManager:
   - Cart
   - ThrowableObject
   - Death Collider
+  - Weapon
   layers:
   - Default
   - TransparentFX

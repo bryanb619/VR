@@ -21,7 +21,7 @@ public class WeaponSpawner : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Untagged"))
+        if (other.gameObject.CompareTag("Weapon"))
         {
             other.gameObject.tag = "ThrowableObject";
             StartCoroutine(SpawnTimer());
@@ -30,7 +30,7 @@ public class WeaponSpawner : MonoBehaviour
     
     private IEnumerator SpawnTimer()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         SpawnObject();
     }
 

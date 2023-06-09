@@ -79,10 +79,6 @@ MonoBehaviour:
   normalSpeed: 4
   acceleration: 1
   target: {fileID: 0}
-  soundWheels: {fileID: 189136127}
-  soundCrackling: {fileID: 0}
-  soundsMove:
-  - {fileID: 189136127}
 --- !u!65 &1448054339982158474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1255,7 +1251,7 @@ PrefabInstance:
     - target: {fileID: 1512422037977991005, guid: 47a585e15b23fa34b8e71418162c4512, type: 3}
       propertyPath: objectToSpawn
       value: 
-      objectReference: {fileID: 7901968931269961885}
+      objectReference: {fileID: 0}
     - target: {fileID: 1512422037977991007, guid: 47a585e15b23fa34b8e71418162c4512, type: 3}
       propertyPath: m_Enabled
       value: 0
