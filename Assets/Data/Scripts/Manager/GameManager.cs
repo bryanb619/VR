@@ -117,18 +117,22 @@ public class GameManager : MonoBehaviour
     
     public void StartScene()
     {
-        SceneManager.LoadScene("StartMenu");
+        SceneManager.LoadScene("Game");
     }
     
     public void RestartLevel()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene("RestartMenu"); 
+        SceneManager.LoadScene("Level1_Gameover"); 
     }
     
-    public void EndScene()
+    public void RestartLevel2()
     {
-        SceneManager.LoadScene("EndMenu");
+        SceneManager.LoadScene("Level2_Gameover"); 
+    }
+    
+    public void EndGame()
+    {
+        Application.Quit();
     }
     #endregion
 }
