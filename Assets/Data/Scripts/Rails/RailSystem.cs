@@ -1,14 +1,10 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 public class RailSystem : MonoBehaviour
 {
-    [SerializeField] private Transform[] target;
-
-    private Cart _cart;
-    
-    private int _i = 0;  
+    [SerializeField]    private Transform[]         target;
+                        private Cart                _cart;
+                        private int                 _i = 0;  
 
     private void Awake()
     {
@@ -24,22 +20,23 @@ public class RailSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // test 
 
-        #if UNITY_EDITOR
+        // test 
+#if UNITY_EDITOR
+        
         if(Input.GetKeyDown(KeyCode.K))
         {
             ChangeDestination();
             // DestroyPoints(_target[0]); destruction for safety
         }   
-        #endif
+#endif
     }
     
     private void StartPoint()
     {
         _cart.Destination(target[0]);
     }
-
+    
     public void ChangeDestination()
     {
         _i++; 
@@ -54,6 +51,7 @@ public class RailSystem : MonoBehaviour
                 }
                 
                 _cart.Destination(target[1]);
+                _cart.ResumeCart();
                 break;
             }
             case 2:
@@ -63,7 +61,9 @@ public class RailSystem : MonoBehaviour
                 {
                     DestroyPoints(target[1]);
                 }
+                
                 _cart.Destination(target[2]);
+                _cart.ResumeCart();
 
                 break;
             }
@@ -76,6 +76,7 @@ public class RailSystem : MonoBehaviour
                 }
                 
                 _cart.Destination(target[3]);
+                _cart.ResumeCart();
                 
                 break;
             }
@@ -86,6 +87,7 @@ public class RailSystem : MonoBehaviour
                 if (target[3] != null)
                 {
                     DestroyPoints(target[3]);
+                    _cart.ResumeCart();
                 }
                 
                 break;
@@ -98,6 +100,7 @@ public class RailSystem : MonoBehaviour
                     DestroyPoints(target[4]);
                 }
                 _cart.Destination(target[5]);
+                _cart.ResumeCart();
                 break;
             }
         }

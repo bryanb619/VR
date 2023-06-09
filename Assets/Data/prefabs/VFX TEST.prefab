@@ -113,7 +113,7 @@ MonoBehaviour:
   profileSync: 1
   useCustomBounds: 0
   bounds:
-    m_Center: {x: 31.90107, y: 5.6500006, z: 4.282708}
+    m_Center: {x: 0.057074115, y: 1.9000006, z: 0.17125303}
     m_Extent: {x: 5.210269, y: 3.7, z: 5.210269}
   profile: {fileID: 0}
   customRange: 3.7
@@ -303,9 +303,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8aeda98e69c59364b90fbc8472fadf03, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f81f4faf4b75d1846a4b2f25e4ea9c3e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -349,7 +349,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.2
       inSlope: 0
       outSlope: 0
       tangentMode: 0

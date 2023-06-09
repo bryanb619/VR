@@ -41,6 +41,7 @@ public class Cart : MonoBehaviour
 
     private void Update()
     {
+        
         //if (_agent.velocity.magnitude > 0.1f)
         /*
         if(Input.GetKeyDown(KeyCode.H))
