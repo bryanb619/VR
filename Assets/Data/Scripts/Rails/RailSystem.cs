@@ -24,12 +24,13 @@ public class RailSystem : MonoBehaviour
     {
         // test 
 
+        #if UNITY_EDITOR
         if(Input.GetKeyDown(KeyCode.K))
         {
-            ChangeDestination(); 
-
+            ChangeDestination();
             // DestroyPoints(_target[0]); destruction for safety
         }   
+        #endif
     }
 
     public void ChangeDestination()
@@ -48,23 +49,21 @@ public class RailSystem : MonoBehaviour
                     }
                 case 2:
                     {
-                        _cart.Destination(target[1]);
-
-                        //DestroyPoints(target[0]);
+                        _cart.Destination(target[2]);
+                        DestroyPoints(target[1]);
                         break;
                     }
                 case 3:
                     {
-                        _cart.Destination(target[1]);
+                        _cart.Destination(target[3]);
 
-                        //DestroyPoints(target[0]);
+                        DestroyPoints(target[2]);
                         break;
                     }
                 case 4:
                     {
-                        _cart.Destination(target[1]);
-
-                        //DestroyPoints(target[0]);
+                        _cart.Destination(target[4]);
+                        DestroyPoints(target[3]);
                         break;
                     }
             }
