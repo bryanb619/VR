@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1448054339982158477}
   - component: {fileID: 1448054339982158475}
   - component: {fileID: 1448054339982158474}
-  - component: {fileID: 189136128}
   - component: {fileID: 189136127}
   m_Layer: 0
   m_Name: Cart
@@ -97,36 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5181117, y: 1, z: 1.991104}
   m_Center: {x: 0.22690272, y: 0, z: 0.016110718}
---- !u!114 &189136128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448054339982158478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 134893
-      Data2: 1325579725
-      Data3: 932244
-      Data4: 1794088815
-    Path: event:/World/Gameplay/Cart/Squeaking
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 85
 --- !u!114 &189136127
 MonoBehaviour:
   m_ObjectHideFlags: 0
