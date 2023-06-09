@@ -16,6 +16,8 @@ public class Cart : MonoBehaviour
 
                         private Vector3 _destination;
 
+    [SerializeField] private AudioSource cartSound; 
+
     //[SerializeField]    private StudioEventEmitter soundWheels, soundCrackling;
     //[SerializeField]    private StudioEventEmitter[] soundsMove;
 
@@ -74,5 +76,22 @@ public class Cart : MonoBehaviour
     public void RotateAround(Quaternion newRotation)
     {
         //transform.rotation = newRotation;
+    }
+
+
+    public void ResumeCart()
+    {
+        cartSound.Play();
+        
+        _agent.isStopped = false;
+    }
+    
+    public void StopCart()
+    {
+        cartSound.Stop();
+        
+        _agent.velocity = Vector3.zero; 
+        _agent.isStopped = true;
+        
     }
 }
