@@ -102,6 +102,9 @@ public class RailSystem : MonoBehaviour
                 _cart.ResumeCart();
                 break;
             }
+            
+            default:
+                break;
         }
 
         

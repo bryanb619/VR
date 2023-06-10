@@ -59,7 +59,7 @@ public class SignKnockdown : MonoBehaviour
     
     private IEnumerator DeathTimer()
     {
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(20f);
         DeathCheck();
     }
 }

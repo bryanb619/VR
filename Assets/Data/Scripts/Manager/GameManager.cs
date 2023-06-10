@@ -80,43 +80,7 @@ public class GameManager : MonoBehaviour
     #region Level Management
     public void NextLevel(int index)
     {
-        switch(index)
-        {
-            case 1:
-                SceneManager.LoadScene(index);
-                break;
-            
-            case 2:
-                {
-                    SceneManager.LoadScene(index);
-
-#if UNITY_EDITOR
-                    Debug.Log("Loading Level 2");
-#endif
-                    break;
-                }
-                
-            case 3:
-                {
-                    SceneManager.LoadScene(index);
-
-#if UNITY_EDITOR
-                    Debug.Log("Loading Level 3");
-#endif
-                    break;
-                }
-            case 4:
-                {
-
-                    SceneManager.LoadScene(index);
-
-#if UNITY_EDITOR
-                    Debug.Log("Loading Level 4");
-#endif
-                    break;
-                }
-
-        }
+        SceneManager.LoadScene(index);
     }
     
     public void StartScene()
