@@ -82,6 +82,10 @@ public class GameManager : MonoBehaviour
     {
         switch(index)
         {
+            case 1:
+                SceneManager.LoadScene(index);
+                break;
+            
             case 2:
                 {
                     SceneManager.LoadScene(index);
